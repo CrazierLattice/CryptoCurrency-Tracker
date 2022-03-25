@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/maplestory-mushroom.png" />
+
+    <!-- Bootstrap CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Customized Google Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&family=Kufam:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking my own css file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- My script file -->
+    <script src="index.js"></script>
+    <title>Cryptonite</title>
+  </head>
+
+  <body class="bg-warning">
+    <div id="loading">
+      <img id="loading-image" src="images/loading.gif" alt="Loading..." />
+    </div>
+    <div class="parallax"></div>
+    <img id="error" src="images/error-404.png" alt="Loading..." />
+    <div class="container">
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg navbar-light bg-warning sticky-top"
+      >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="#navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <span class="navbar-brand text-black nav-font">Cryptonite</span>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <button
+                onclick="initCoins()"
+                class="home btn text-black nav-font"
+              >
+                Home
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                onclick="drawModalElements(checkedSliders, checkedSliders[5] || null, 'Your selected coins are:')"
+                class="btn text-black nav-font"
+                data-toggle="modal"
+                data-target="#modal"
+              >
+                Live Reports
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn text-black nav-font about-btn"
+                onclick="showPersonalInfo()"
+              >
+                About
+              </button>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              onkeyup="searchFilter()"
+              id="search-input"
+              class="form-control"
+              type="search"
+              placeholder="Type a coin symbol"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </nav>
+      <div id="chartContainer" style="height: 400px; width: 100%"></div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content bg-light">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button id="live-reports" type="button" class="btn btn-warning">
+                Go to Live Reports
+              </button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards-container"></div>
+      <div class="text-white bg-warning personal-info">
+        <div class="personal-p">
+          My name is Michael Koinov, and I'm currently studying <br />
+          Full Stack Web Development at John Bryce. <br />
+          I'm 21 years old and I am from Bat-Yam, currently working as a
+          customer service representative at Ituran. <br />
+          As a part of my studies, I made this jQuery-AJAX API project which is
+          about the virtual commerce.
+          <br />
+          You can check out the displayed currencies and see their values in
+          EUR, USD and. NIS. <br />
+          This project design is based on a video game called MapleStory - a
+          childhood game that I used to play alot when I was younger. <br />
+          Hope you enjoyed using my website.
+        </div>
+
+        <div class="my-picture">
+          <img
+            id="myPicture"
+            src="images/about-picture.jpeg"
+            alt="my Picture"
+          />
+          <p class="personal-p">
+            Here's a picture of me drinking some beer, <br />
+            hopefully it will treat the headache <br />
+            that this project gave me (and maybe some bonus points because my
+            lecturer likes beer)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+* {
+  font-family: "Raleway", sans-serif;
+}
+body {
+  cursor: url("images/maplestory_cursor.png"), default;
+  height: 100%;
+  /* background-image: url('images/maplestory-body.png');
+      background-repeat: no-repeat;
+      background-size: 100%  100%;
+      position: left top; */
+  background: url("images/maplestory-body.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.money {
+  font-family: "Kufam", cursive;
+  line-height: inherit;
+}
+
+.container {
+  display: none;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("images/parallaxpng.png");
+  background-attachment: fixed;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  height: 50vh;
+  background-position: top;
+  display: none;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.slider-title {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.switch-modal {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: 0;
+  top: 0;
+}
+
+.switch-modal input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.modal-slider {
+  position: relative;
+  margin-top: 15px;
+  height: 40px;
+}
+
+#loading {
+  display: block;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#loading-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+.personal-p {
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+.nav-font {
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-font:hover {
+  color: crimson;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.coin-image {
+  bottom: 1.38rem;
+  position: relative;
+  float: right;
+  left: 20.5px;
+  border-radius: 0.25rem;
+}
+
+.checkbox-span {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+.card {
+  width: 250px;
+  height: 250px;
+  margin: 20px 0px 0px 20px;
+}
+.card-text {
+  /* width: 140px;
+  height: 70px; */
+  font-size: 12px;
+  overflow-wrap: break-word;
+  height: 54px;
+  width: 140px;
+  font-family: "Raleway", sans-serif;
+}
+
+.card-title {
+  font-weight: bold;
+  text-decoration: underline;
+  height: 40px;
+  font-size: 12px;
+  overflow-wrap: break-word;
+  font-family: "Raleway", sans-serif;
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right: 4px;
+  top: 12px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f0ad4e;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f0ad4e;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.loading-money {
+  position: fixed;
+  z-index: 999999999999999999999999999999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  background: url("images/bitcoin-loading.gif") 50% 70% no-repeat;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.personal-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.p {
+  height: 50%;
+  width: 100%;
+}
+
+#myPicture {
+  height: 200px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.beer {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.my-picture {
+  display: flex;
+}
+
+#error {
+  display: none;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+}
+
+#chartContainer {
+  display: none;
+}
